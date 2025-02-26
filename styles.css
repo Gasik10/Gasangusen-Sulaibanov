@@ -26,10 +26,10 @@ section {
   padding: 2rem;
 }
 
-#projects .project {
-  margin: 1rem 0;
+h1, h2 {
+  font-size: 2rem;
 }
 
-h1 {
-  font-size: 2rem;
+#projects .project {
+  margin: 1rem 0;
 }

@@ -1,83 +1,111 @@
+/* Подключаем Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Merriweather:wght@400;700&display=swap');
+
+/* Общие стили */
 body {
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(to bottom, #F5F7FA, #E8ECEF);
+    color: #2D3748;
     margin: 0;
     padding: 0;
     line-height: 1.6;
-    color: #003087;
-    background: #fff;
 }
-header {
-    background: #e6e6e6;
-    text-align: center;
-    padding: 1.5rem;
-    border-bottom: 1px solid #ccc;
-}
-header h1 {
-    margin: 0;
-    font-size: 2rem;
-    color: #003087;
-}
-header p {
-    font-size: 1rem;
-    color: #333;
-    margin: 0.5rem 0;
-}
-nav {
-    margin: 1rem 0;
-}
-nav a {
-    margin: 0 0.75rem;
-    text-decoration: none;
-    color: #003087;
-    font-weight: normal;
-}
-nav a:hover {
-    text-decoration: underline;
-}
-nav a.lang {
-    font-style: italic;
-}
-main {
+
+/* Контейнер */
+.container {
     max-width: 900px;
     margin: 0 auto;
-    padding: 2rem;
+    padding: 20px;
+}
+
+/* Заголовки */
+h1, h2 {
+    font-family: 'Merriweather', serif;
+    color: #1A3C87;
+}
+h1 {
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 10px;
 }
 h2 {
-    font-size: 1.5rem;
-    color: #003087;
-    margin-bottom: 1rem;
+    font-size: 22px;
+    margin-top: 30px;
 }
-p {
-    margin: 0.5rem 0;
+
+/* Навигация */
+nav {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
+nav a {
+    color: #3182CE;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: 700;
+    transition: color 0.3s;
+}
+nav a:hover {
+    color: #63B3ED;
+}
+
+/* Кнопка */
 .button {
     display: inline-block;
-    padding: 0.4rem 0.8rem;
-    background: #003087;
-    color: #fff;
+    background-color: #F6AD55;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
     text-decoration: none;
-    border-radius: 3px;
-    margin-top: 1rem;
+    font-weight: 700;
+    transition: transform 0.2s, background-color 0.3s;
 }
 .button:hover {
-    background: #002060;
+    background-color: #ED8936;
+    transform: scale(1.05);
 }
+
+/* Карточки для публикаций/конференций */
+.card {
+    background-color: #fff;
+    padding: 20px;
+    margin: 15px 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Футер */
 footer {
     text-align: center;
-    padding: 1rem;
-    background: #e6e6e6;
-    border-top: 1px solid #ccc;
-    margin-top: 2rem;
+    margin-top: 40px;
+    color: #2D3748;
+    font-size: 14px;
 }
+
+/* Мобильная версия */
 @media (max-width: 600px) {
-    header h1 {
-        font-size: 1.6rem;
+    .container {
+        padding: 10px;
+    }
+    nav {
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
     }
     nav a {
-        display: block;
-        margin: 0.5rem 0;
+        margin: 5px 0;
     }
-    main {
-        padding: 1rem;
+    h1 {
+        font-size: 24px;
+    }
+    h2 {
+        font-size: 20px;
+    }
+    .button {
+        width: 100%;
+        text-align: center;
     }
 }

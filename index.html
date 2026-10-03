@@ -32,29 +32,46 @@
         <a href="#" class="lang">RU</a>
     </nav>
 
+
     <div class="container">
 
-        <header>
-            <h1>Gasangusen Sulaibanov</h1>
+        <header class="profile-header">
 
-            <p>
-                PhD in Linguistics, EPHE, PSL, Paris
-            </p>
+            <div class="profile-photo">
+                <img src="Gasik.jpg"
+                     alt="Gasangusen Sulaibanov"
+                     loading="eager">
+            </div>
 
-            <p class="affiliations">
-                <a href="https://proclac.cnrs.fr/"
-                   target="_blank"
-                   rel="noopener noreferrer">
-                    Proche-Orient – Caucase : langues, archéologie, cultures (PROCLAC) – UMR 7192 – Paris
-                </a>
-                <br>
+            <div class="profile-info">
 
-                <a href="https://ddl.cnrs.fr/"
-                   target="_blank"
-                   rel="noopener noreferrer">
-                    Laboratoire Dynamique du Langage (DDL) – UMR 5596 – Lyon
-                </a>
-            </p>
+                <h1>Gasangusen Sulaibanov</h1>
+
+                <p>
+                    PhD in Linguistics, EPHE, PSL, Paris
+                </p>
+
+                <p class="affiliations">
+
+                    <a href="https://proclac.cnrs.fr/"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        Proche-Orient – Caucase : langues, archéologie, cultures
+                        (PROCLAC) – UMR 7192 – Paris
+                    </a>
+
+                    <br>
+
+                    <a href="https://ddl.cnrs.fr/"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        Laboratoire Dynamique du Langage (DDL) – UMR 5596 – Lyon
+                    </a>
+
+                </p>
+
+            </div>
+
         </header>
 
 
@@ -84,6 +101,7 @@
                 <h2>Publications & Contributions to Databases</h2>
 
                 <ul class="pub-list">
+
 
                     <li>
                         <span class="pub-year">2022</span>
@@ -131,6 +149,7 @@
                                 </a>
 
                             </div>
+
                         </div>
                     </li>
 
@@ -348,6 +367,7 @@
                         </div>
                     </li>
 
+
                 </ul>
 
             </section>
@@ -382,6 +402,34 @@
 
     <style>
 
+        /* Profile header */
+
+        .profile-header {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .profile-photo {
+            flex: 0 0 180px;
+        }
+
+        .profile-photo img {
+            width: 180px;
+            height: 230px;
+            object-fit: cover;
+            object-position: center top;
+            border-radius: 10px;
+            display: block;
+        }
+
+        .profile-info {
+            flex: 1;
+        }
+
+
+        /* Affiliations */
+
         .affiliations {
             margin-top: 0.5rem;
             font-size: 0.95rem;
@@ -395,6 +443,9 @@
         .affiliations a:hover {
             text-decoration: underline;
         }
+
+
+        /* Publications */
 
         #publications h2 {
             margin-bottom: 1rem;
@@ -438,6 +489,9 @@
             font-weight: 700;
         }
 
+
+        /* Publication links */
+
         .pub-links {
             margin-top: 0.3rem;
             display: flex;
@@ -453,6 +507,27 @@
 
         .pub-links a:hover {
             text-decoration: underline;
+        }
+
+
+        /* Mobile */
+
+        @media (max-width: 700px) {
+
+            .profile-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .profile-photo {
+                flex-basis: auto;
+            }
+
+            .profile-photo img {
+                width: 160px;
+                height: 205px;
+            }
+
         }
 
     </style>
